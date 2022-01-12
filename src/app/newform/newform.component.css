@@ -1,0 +1,13 @@
+.container{
+    
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+
+}
+.container input[type="submit"]{
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(110, 55, 15);
+    padding: 7px 20px;
+}

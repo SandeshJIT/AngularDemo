@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularapp-f8767": {
+      "hosting": {
+        "hello-world": [
+          "angularapp-f8767"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+
+ <nav>
+   <a routerLink="form">Form link</a>
+</nav>
+ 
+ <div style="color: black; margin-top: 5%;">
+
+        
+        <div *ngFor="let ar of artist"
+        (click)="showName(ar)" 
+        > 
+        <div *ngIf="ar.name.toLowerCase().includes(name.toLowerCase())">
+        <app-subcomp  [ar]="ar" [name]="name"></app-subcomp>
+      </div>
+        </div> 
+          <input class="form-control mg-2"
+          [(ngModel)] = "name">
+          <h1 *ngIf="name">The name of the atrist is {{name}}</h1>
+
+  </div><br><br>
+  <!-- <form #form="ngForm" (ngSubmit) = "onSubmit(form)">
+    <div class="container">
+      <div id=rows>
+    
+    Name : <input type="text" name="name" ngModel/><br><br>
+    Age : <input type="number" name="age" ngModel/><br><br>
+    <input type="submit">
+  </div>
+</div>
+
+  </form> -->
+  <br>
+  <br>
+  <router-outlet></router-outlet>

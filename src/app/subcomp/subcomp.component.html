@@ -1,0 +1,7 @@
+<div (click)="onClickName(ar)"
+[ngClass]="ar.name.startsWith('H') ? 'white':'black'">{{ar.name}} 
+   
+    <div *ngIf="det && name == ar.name">
+        <h4>Bio</h4>
+        {{det | lowercase}}</div>
+</div>

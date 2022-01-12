@@ -1,0 +1,16 @@
+<form [formGroup] = "form" 
+      (ngSubmit) = "onSubmit(form)">
+    <div class="container">
+      <div id=rows>
+    
+    Name : <input type="text" name="Newname" formControlName = "name"/>
+    <br><br>
+    Bio :  <input type="text" name="bio" formControlName = "bio"/>
+    Age : <input type="number" name="age" formControlName = "age"/>
+    <div *ngIf="form.get('age')!==null">
+    <div *ngIf="form.get('age').hasError('age')">Age should be greater than 18</div><br><br></div>
+    <input type="submit" [disabled] = "!form.valid">
+  </div>
+</div>
+</form>
+
